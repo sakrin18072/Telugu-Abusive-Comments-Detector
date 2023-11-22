@@ -30,5 +30,5 @@ app.post("/api",async (req, res) => {
 app.use("*",(request,response)=>{
     response.sendFile(path.join(__dirname,'./client/build/index.html'))
 })
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server listening on PORT: ${PORT}`));
