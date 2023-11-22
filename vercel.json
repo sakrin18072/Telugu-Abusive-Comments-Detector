@@ -1,7 +1,11 @@
 {
     "version": 2,
     "name": "telugu-abusive-comments-detector",
+    "builds": [
+       { "src": "server.js", "use": "@vercel/node" }
+    ],
     "routes": [
        { "src": "/(.*)", "dest": "/server.js" }
-    ]
+    ],
+    "buildCommand":"pip3 install pickle-mixin"
  }
