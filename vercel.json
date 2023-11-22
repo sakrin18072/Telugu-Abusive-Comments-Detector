@@ -1,11 +1,18 @@
 {
    "version": 2,
-   "name": "music-album",
+   "name": "telugu-abusive-comments-detector",
    "builds": [
-      { "src": "server.js", "use": "@vercel/node" }
-      
+      { "src": "server.js", "use": "@vercel/node" },
+         {
+            "src":"app.py",
+            "use":"@vercel/python",
+            "config":
+            {
+               "buildCommand":"pip3 install pickle-mixin"
+            }
+         }
    ],
    "routes": [
-      { "src": "/(.*)", "dest": "/app.js" }
+      { "src": "/(.*)", "dest": "/server.js" }
    ]
 }
