@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,'./client/build')))
 app.post("/api",async (req, res) => {
   try {
     const { comment } = req.body;
-    const pythonProceess = spawn("python3", ["app.py", comment]);
+    const pythonProceess = spawn("pip3 install pickle-mixin && python3", ["app.py", comment]);
     pythonProceess.stdout.on("data", (data) => {
         res.send({
             ok:true,
