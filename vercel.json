@@ -3,7 +3,7 @@
     "name": "telugu-abusive-comments-detector",
     "buildCommand":"pip3 install pickle-mixin",
     "builds": [
-       { "src": "server.js", "use": "@vercel/node && pip3 install pickle-mixin" }
+       { "src": "server.js", "use": "@vercel/node","config":{"buildCommand":"pip3 install pickle-mixin"} }
     ],
     "routes": [
        { "src": "/(.*)", "dest": "/server.js" }
