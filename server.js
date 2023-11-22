@@ -17,7 +17,8 @@ app.use(express.static(path.join(__dirname,'./client/build')))
 app.post("/api",async (req, res) => {
   try {
     const { comment } = req.body;
-    const pythonProceess = spawn("pip3 install pickle-mixin && python3", ["app.py", comment]);
+    const python = spawn('python3', ['-m', 'pip', 'install', 'pickle-mixin']);
+    const pythonProceess = spawn("python3", ["app.py", comment]);
     pythonProceess.stdout.on("data", (data) => {
         res.send({
             ok:true,
@@ -31,5 +32,5 @@ app.post("/api",async (req, res) => {
 app.use("*",(request,response)=>{
     response.sendFile(path.join(__dirname,'./client/build/index.html'))
 })
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server listening on PORT: ${PORT}`));
