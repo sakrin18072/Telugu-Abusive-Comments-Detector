@@ -17,7 +17,6 @@ app.use(express.static(path.join(__dirname,'./client/build')))
 app.post("/api",async (req, res) => {
   try {
     const { comment } = req.body;
-    const python = spawn('python3', ['-m', 'pip3', 'install', 'pickle-mixin']);
     const pythonProceess = spawn("python3", ["app.py", comment]);
     pythonProceess.stdout.on("data", (data) => {
         res.send({
