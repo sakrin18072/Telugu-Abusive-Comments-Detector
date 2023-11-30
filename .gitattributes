@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+teluguAbusiveCommentDetector.sav filter=lfs diff=lfs merge=lfs -text
+tfidf.sav filter=lfs diff=lfs merge=lfs -text
