@@ -6,35 +6,33 @@ const Header = () => {
       <div className="flex justify-around align-middle p-2">
         <div className="hidden md:flex">
           <img
-            src={require("../static/VNRVJIETLogo.png")}
-            alt="vnrlogo"
+            src={require("../static/QuadrantLogo.png")}
+            alt="quadrantlogo"
             className="my-auto h-12"
           />
           &nbsp;<span className="my-auto">|</span>&nbsp;
           <b className="m-auto text-base font-extrabold italic ">
-            Course Based Project
+            Pravaah - 2024 AI Hackathon
           </b>
         </div>
         <div className="m-auto">
-          <p className=" font-extrabold text-4xl ">Data Engineering</p>
+          <p className=" font-extrabold text-4xl pr-48">
+            Focus -
+            NLP
+          </p>
           <b className="md:hidden xs:flex m-auto text-base font-extrabold italic">
-            Course Based Project
+            Pravaah - 2024 AI Hackathon
           </b>
         </div>
         <div className="flex flex-col my-auto">
           <div className=" ">
             <b>Team:</b>&nbsp;{" "}
             <span className=" text-base font-extralight italic">
-              Airanevanchalaenti
+              Cyber Guardians
             </span>
           </div>
           <div>
-            with <span className="font-bold">K.N.D. Saile</span>
-          </div>
-          <div>
-            <span className=" text-sm font-extralight italic">
-              Assistant Professor
-            </span>
+            <span className="font-bold">VNR VJIET</span>
           </div>
         </div>
       </div>
